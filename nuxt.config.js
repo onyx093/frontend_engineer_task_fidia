@@ -31,6 +31,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/fontawesome',
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -39,5 +41,27 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  tailwindcss: {
+    configPath: './tailwind.config.js',
+    exposeConfig: false,
+    config: {},
+    injectPosition: 0,
+    viewer: true,
+    jit: true,
+  },
+
+  fontawesome: {
+    component: 'fa',
+    icons: {
+      solid: true,
+      regular: true,
+    }
+  },
+  googleFonts: {
+    families: {
+      Inter: true
+    }
+  },
 }
